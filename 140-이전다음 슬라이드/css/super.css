@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+#wrap{
+  width: 433px;
+  margin: 0 auto;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.superband{
+  overflow: hidden;
+  position: relative;/*기준점 설정*/
+  height: 305px;
+}
+
+.superband>ul{
+  display: flex;
+  justify-content: space-between;
+  width: 433px;
+  width: calc(68px * 6 + 25px);
+}
+
+.superband>ul>li{
+  width: 68px;
+  border: 5px solid #ccc;
+  box-sizing: border-box;
+}
+
+.superband>ul>li:hover{border-color: pink;}
+.superband>ul>li.on{border-color: orange;}
+
+.superband>ul>li:nth-child(1){background-image: url(../images/th1.jpg);}
+.superband>ul>li:nth-child(2){background-image: url(../images/th2.jpg);}
+.superband>ul>li:nth-child(3){background-image: url(../images/th2.jpg);}
+.superband>ul>li:nth-child(4){background-image: url(../images/th3.jpg);}
+.superband>ul>li:nth-child(5){background-image: url(../images/th4.jpg);}
+.superband>ul>li:nth-child(6){background-image: url(../images/th5.jpg);}
+
+.superband>ul>li>a{
+  display: block;
+  height: 47px;
+  text-indent: -9999px;/* 안드로메다 기법 */
+}
+
+.superband>ol{
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 62px;
+  width: calc(433px * 6);
+  /* margin-top: 5px; */
+}
+
+.superband>ol>li{
+  width: 433px;
+  background-size: cover;
+  border: 5px solid #ccc;
+  box-sizing: border-box;
+}
+
+.superband>ol>li:nth-child(1){background-image: url(../images/big1.jpg);}
+.superband>ol>li:nth-child(2){background-image: url(../images/big2.jpg);}
+.superband>ol>li:nth-child(3){background-image: url(../images/big3.jpg);}
+.superband>ol>li:nth-child(4){background-image: url(../images/big4.jpg);}
+.superband>ol>li:nth-child(5){background-image: url(../images/big5.jpg);}
+.superband>ol>li:nth-child(6){background-image: url(../images/big6.jpg);}
+
+.superband>ol>li>a{
+  display: block;
+  height: 243px;
+  text-indent: -9999px;
+}
+
+/* 이전다음 버튼 */
+button{
+  background: none;
+  outline: none;
+  border: none;
+
+  position: absolute;
+  top: 50%;
+
+  width: 80px;
+  height: 100px;
+
+  text-indent: -9999px;
+}
+
+.prev{
+  left: 5px;
+  background-image: url(../images/btn_prev.png);
+}
+
+.prev:hover{background-image: url(../images/btn_prev_on.png);}
+
+
+.next{
+  right: 5px;
+  background-image: url(../images/btn_next.png);
+}
+
+.next:hover{background-image: url(../images/btn_next_on.png);}
