@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100-선택한 요소의 인덱스를 추출하는 .index().html</title>
+    
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(function(){
+            const $a = $('ol>li>a');
+            $a.on('click', function(evt){
+                evt.preventDefault();
+
+                const nowIdx = $a.index(this);
+                $("span").text(nowIdx);
+
+            });
+        });
+    </script>
+    <style>
+        #wrap{
+            width: 800px;
+            height: auto;
+            margin:0 auto;
+        }
+
+        ol>li{
+            list-style: none;
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid #000;
+            margin-bottom: 10px;
+        }
+        ol>li:hover{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>오늘까지 배운 제이쿼리 API</h1>
+<ol>
+    <li><a href="">선택할때 $(this).parent() .siblings()-형제</a></li>
+    <li><a href="">이벤트 구문 .on()</a></li>
+    <li><a href="">값의 상태를 변화 .attr(), .css() , show(), .hide(), .addClass(), .removeClass() , .toggleClass()</a></li>
+    <li><a href="">효과 .animate(), .stop()</a></li>
+    <li><a href=""></a></li>
+</ol>
+    </div>
+    <h2>
+        현재 선택된 li > a의 ㅇindex = <span>?</span>
+    </h2>
+</body>
+</html>
