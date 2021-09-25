@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+
+#wrap{
+    margin: 0 auto;
+    border: 1px solid #000;
+    text-align: center;
+}
+.text_center{
+    font-size: 25px;
+    margin: 20px 0px;
+}
+.visual{
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.container{
+display: flex;
+justify-content: space-between;
+overflow: hidden;}
+.container li{
+
+    width: 100%;
+    height: 300px;
+       border: 1px solid #000;
+       color: #fff;
+}
+.container li a{
+    
+    display:none;
+    padding: 20px 0px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+}
+.container li:nth-child(1){
+    background-image: url(../images/banner_1.png);
+    background-size: cover;
+}
+.container li:nth-child(2){
+    background-image: url(../images/banner_2.png);
+    background-size: cover;
+}
+.container li:nth-child(3){
+    background-image: url(../images/banner_3.png);
+    background-size: cover;
+}
+
+.pagination{
+    position: absolute;
+    width: 50px;
+display: flex;
+justify-content: space-between;
+    left: 50%;
+    margin-left: -25px;
+    bottom: 20px;
+    border: 1px solid #fff;
+}
+
+.pagination li{
+    border: 1px solid #000;
+    background: #ccc;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+.pagination li.on{
+    background: tomato;
+}
+.pagination li a{
+    position: absolute;
+    left: -999999;
+    z-index: -99;
+}
+
+.prev{
+    position: absolute;
+    display: block;
+    border: 1px solid #000;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    margin-top: -20px;
+left: 10px;    
+}
+
+.next{
+    position: absolute;
+    display: block;
+    border: 1px solid #000;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    
+    margin-top: -20px;
+    right: 10px;
+    
+}
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
