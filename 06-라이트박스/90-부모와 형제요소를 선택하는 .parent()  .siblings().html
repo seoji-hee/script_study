@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>90-부모와 형제요소를 선택하는 .parent()  .siblings().html</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <style>
+        #wrap{
+            width: 650px;
+            margin: 0 auto;
+            text-align: center;            ;
+        }
+
+        p{
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid #000;
+        }
+    </style>
+    <script>
+    $(function(){
+        $('button').on('click', function(){
+        $(this).parent().css('background-image', 'url(./images/flower1.jpg)'); //this의 부모 = $('p')
+        });
+        //.pain을 click하면 형제요소의 글자크기를 25px
+        $('.pain').on('click', function(){
+            $(this).siblings().css('font-size', '25px');
+        });
+    });
+    </script>
+</head>
+<body>
+  <div id="wrap">
+      <h1>직계부모, 친형제요소 선택</h1>
+      <h2>.parent()로 직계부모 선택</h2>
+      <p ><button>확인</button></p>
+
+      <h2>.siblings()로 좌우 형제 선택</h2>
+
+      <ul>
+          <li>오늘 할일을 내일로 미루지 말자</li>
+          <li>힘들어도 꿋꿋하게...</li>
+          <li class="pain">아프면 안돼~!</li>
+          <li>종합 비타민을 잘 챙겨먹자</li>
+          <li>지금 현재에 집중하자</li>
+      </ul>
+  </div>  
+</body>
+</html>

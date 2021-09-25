@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+            ul,li{list-style: none;}
+                #wrap{width:500px;margin:0 auto;}
+                h1{height:100;line-height:100px;text-align:center;}
+                section>ul>li{height:48px;line-height:48px;text-align:center;}
+    </style>
+
+
+<script>
+    //준비 핸들러
+    $(document).ready(function(){
+        $('.cat').on('click', function(){
+    
+            //let $style = $(this).attr('src');
+            $(this).css('font-size', 'blue');
+            $(this).css('font-weight', 'bold');
+            $(this).css('background-color', 'yellow');
+
+        });
+    });
+</script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+           <h1>반려동물을 찾아 스타일 입히기</h1>
+    
+        </header>
+        <section>
+           <ul>
+              <li>여우</li>
+              <li class="cat">고양이</li>
+              <li>금붕어</li>
+              <li class="dog">강아지</li>
+              <li>달팽이</li>
+           </ul>
+        </section>
+     </div>
+</body>
+</html>
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+
+        //evt는 a, form 태그의 기본 기능을 막을 때만 사용된다
+        //dom 트리 구성이 완료 된 시점에 함수를 실행해라
+        $(document).ready( function(){
+
+
+        let $btn = $('#button_01');
+        $btn.on('click',function(){
+            alert("버튼 클릭");
+       
+  
+
+        $('p>img').attr('src', './images/game.jpg'); //속성이여서 css가 아닌 attr 사용해야 하고, 이미지는 경로를 써줘야 한다
+        $('p>img').attr('alt', '게임장');
+
+
+        $('p>img').attr('style','border:5px solid #f0f');
+       });
+               //this는 이벤트 구문에서 사용 가능하다
+        //let $btn_this = $(this).attr('src',$btn_this ); 잘못됨
+        $('img').on('click', function () {
+            
+            const imgSrc = $(this).attr('src');
+            console.log(imgSrc);
+    
+            $('nth-of-type(2)').on('click', function(){
+                $('p>img').removeAttr('style');
+            });
+          });
+    
+    
+    
+          });
+
+          
+
+     
+    </script>
+</head>
+<body>
+    <!-- attr: 태그의 속성을 제거함 -->
+    <div id="wrap">
+        <h1>태그의 속성값을 가져오거나 넣을수 있는 .attr() api 사용법</h1>
+        <p><img src="./images/happy.jpg" alt="" style="border:1px solid #000;"></p>
+
+        <button type="button" id="button_01">속성변경</button>
+        <button type="button" d="button_02">속성제거</button>
+    </div>
+</body>
+</html>

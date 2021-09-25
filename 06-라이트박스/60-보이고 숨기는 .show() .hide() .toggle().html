@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    p{
+        display: none;
+        width: 300px;
+        height: 50px;
+        line-height: 50px;
+        border: 1px solid #000;
+        text-align: center;
+    }
+</style>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            const $pbox = $('p');
+
+            //show 버튼에 대한 클릭 이벤트 쿠문
+            $('.show').on('click', function(){
+            //$pbox.css('display', 'block');
+                $pbox.show();
+            });
+
+
+            $('.hide').on('click',function(){
+                $pbox.hide();
+            });
+
+            $('.toggle').on('click', function(){
+                $pbox.toggle();
+            });
+        });
+    </script>
+</head>
+<body>
+   <div id="wrap">
+       <h1>
+            .SHOW(), .HIDE()
+       </h1>
+
+       <p>쉽고 재미있는 제이쿼리 API 사용법</p>
+
+       <div>
+           <button class="show">show</button>
+           <button class="hide">hide</button>
+           <button class="toggle">toggle</button>
+       </div>
+   </div>         
+</body>
+</html>

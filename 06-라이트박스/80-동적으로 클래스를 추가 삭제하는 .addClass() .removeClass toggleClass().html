@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>80-동적으로 클래스를 추가 삭제하는 .addClass() .removeClass toggleClass().html</title>
+    
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+//$();
+//function(){}
+    
+    $(document).ready(function(){
+$('.add').on('click', function(){
+$('li:nth-child(1)').addClass('yellow'); //addClss- API 이름이 CLASS라고 명시적이여서 앞에 . 안붙인다
+});
+
+$('.remove').on('click', function(){
+$('li:nth-child(2)').removeClass('green');
+});
+
+//마지막 버튼을 click하면 세번째 li에 .pink가 없으면 추가, 있으면 삭제하시오
+$('.toggle').on('click', function(){
+$('li:nth-child(3)').toggleClass('pink');
+});
+    });
+</script>
+</head>
+<body>
+    <style>
+        #wrap{
+            width: 600px;
+            margin: 0 auto;
+        }
+        h1{
+            font-size: 20px;
+
+        }
+        ul>li{
+            list-style: none;
+            margin-bottom: 10px;
+            height: 50px;
+           line: height 50px;
+           border: 1px solid #000;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .green{background-color: green;}
+        .pink{background-color: pink;}
+    </style>
+    <div id="wrap">
+        <h1>동적으로 클래스를 추가 삭제하는 API 3종 세트</h1>
+
+    <ul>
+        <li >.yellow 클래스 추가 </li>
+        <li class="green">.green 클래스 삭제</li>
+        <li>.pink 클레스 추가/삭제</li>
+    </ul>
+
+        <button class="add">addClass</button>
+        <button class="remove">removeClass</button>
+        <button class="toggle">toggle</button>
+    </div>
+</body>
+</html>
