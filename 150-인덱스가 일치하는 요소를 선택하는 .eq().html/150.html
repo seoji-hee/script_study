@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <style>
+        *{margin:0;padding:0;}
+        ul,li{list-style:none;}
+        
+        #wrap{
+           width:500px;
+           margin:0 auto;
+           text-align:center;
+        }
+        
+        ul>li{
+           height:60px;
+           margin-bottom:10px;
+           line-height:60px;
+           border:1px solid black;
+        }
+        
+        .tit{height:100px;line-height:100px;}
+        
+        .bgc{background-color:#FF0;}
+        .fz{font-size:20px;}
+        .fw{font-weight:800;}
+        .c{color:#f00;}
+      </style>
+</head>
+<body>
+    <script >
+        $(function(){
+//문제1) li요소중 index=2인 요소를 클릭하면 .bgc 클래스를 붙이시오.
+const $li = $('li');
+//$color = $('li:nth-child(2)');
+$li.eq(2).on('click', function(){
+$(this).addClass('bgc');
+});
+        });
+    </script>
+    <div id="wrap">
+        <h1 class="tit">.eq(idx) 메소드</h1>
+        <ul class="color">
+           <li>빨간색</li>
+           <li>오렌지색</li>
+           <li>노란색</li>
+           <li>초록색</li>
+           <li>파란색</li>
+        </ul>
+     </div> 
+</body>
+</html>
+
